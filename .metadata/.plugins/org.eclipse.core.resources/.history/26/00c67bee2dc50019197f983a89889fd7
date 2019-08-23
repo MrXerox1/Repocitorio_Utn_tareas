@@ -1,0 +1,27 @@
+/*
+ * PedirSumaConFuncio.c
+ *
+ *  Created on: 22 ago. 2019
+ *      Author: alumno
+ */
+#include <stdio.h>
+#include <stdlib.h>
+int Sumar(int* resultado);
+
+int main(void){
+	int resultado;
+	Sumar(int* resultado);
+	printf("El resultado es: %d",&resultado);
+
+}
+int Sumar(int* resultado)
+{
+	int numero1;
+	int numero2;
+	printf("\nNumero 1: ");
+	scanf("%d",&numero1);
+	printf("\nNumero 2: ");
+	scanf("%d",&numero2);
+	*resultado=numero1+numero2;
+	return 0;
+}

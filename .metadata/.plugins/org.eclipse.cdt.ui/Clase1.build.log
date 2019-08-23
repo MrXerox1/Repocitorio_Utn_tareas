@@ -1,0 +1,19 @@
+19:07:08 **** Incremental Build of configuration Debug for project Clase1 ****
+make all 
+Building file: ../src/Clase1.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Clase1.d" -MT"src/Clase1.o" -o "src/Clase1.o" "../src/Clase1.c"
+../src/Clase1.c: In function ‘main’:
+../src/Clase1.c:36:2: error: expected declaration or statement at end of input
+  }
+  ^
+At top level:
+../src/Clase1.c:26:6: warning: ‘PedirSumar’ defined but not used [-Wunused-function]
+src/subdir.mk:18: fallo en las instrucciones para el objetivo 'src/Clase1.o'
+  int PedirSumar(int* resultado)
+      ^~~~~~~~~~
+make: *** [src/Clase1.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+
+19:07:08 Build Failed. 3 errors, 1 warnings. (took 264ms)
+

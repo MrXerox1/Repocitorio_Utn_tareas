@@ -1,0 +1,1 @@
+PedirSumaConFuncio.o: ../PedirSumaConFuncio.c

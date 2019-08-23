@@ -1,0 +1,1 @@
+PedirSuma.o: ../PedirSuma.c

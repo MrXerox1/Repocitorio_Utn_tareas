@@ -1,0 +1,19 @@
+/*
+ ============================================================================
+ Name        : Clase1.c
+ Author      : Anibal
+ Version     :
+ Copyright   : Your copyright notice
+ Description : Hello World in C, Ansi-style
+ ============================================================================
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void) {
+	//puts("QUE HASHEE"); /* prints QUE HASHEE */
+	//return EXIT_SUCCESS;
+	printf("HOLANDAA"); /* prints QUE HASHEE */
+	return 0;
+}
