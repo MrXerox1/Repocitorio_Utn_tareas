@@ -9,31 +9,30 @@
 #define CANT_NUM 5
 #define RETORNO_EXITOSO 0
 #define ERROR_UNO -1
-
-int calcularMaximoyMinimo(CANT_NUM,&resultadoMaximo,&resultadoMinimo) == RETORNO_EXITOSO);
+int calcularMaximoyMinimo(int cantidadIntentos,int *resultadoMaximo,int *resultadoMinimo);
 int main(void)
 {
 	int resultadoMaximo;
 	int resultadoMinimo;
 		if (calcularMaximoyMinimo(CANT_NUM,&resultadoMaximo,&resultadoMinimo) == RETORNO_EXITOSO){
 			printf("el numero maximo es: %d y el numero minimo es: %d",resultadoMaximo,resultadoMinimo);
+			return RETORNO_EXITOSO;
 		}
 		else{
 			printf("intente de nuevo");
+			return ERROR_UNO;
 		}
-	return 0;
+
 
 }
-int calcularMaximoyMinimo(int cantidadNumeros,int *resultadoMaximo,int *resultadoMinimo)
+int calcularMaximoyMinimo(int cantidadIntentos,int *resultadoMaximo,int *resultadoMinimo)
 {
 	int numero;
 	int maximo;
 	int minimo;
-	int retorno = ERROR_UNO;
 	int i;
-	if(cantidadNumeros>0)
-	{
-		for(i = 0;i < cantidadNumeros;i++ && *resultadoMaximo != NULL && *resultadoMinimo != NULL)
+	if (cantidadIntentos > 0){
+		for(i = 0;i < cantidadIntentos;i++)
 		{
 			printf("ingrese un numero: \n");
 			scanf("%d",&numero);
@@ -48,7 +47,9 @@ int calcularMaximoyMinimo(int cantidadNumeros,int *resultadoMaximo,int *resultad
 		}
 		*resultadoMinimo=minimo;
 		*resultadoMaximo=maximo;
-		return retorno;
+		return RETORNO_EXITOSO;
+	}else
+	{
+		return ERROR_UNO;
 	}
-	return RETORNO_EXITOSO;
 }
