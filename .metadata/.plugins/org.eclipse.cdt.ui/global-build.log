@@ -1,18 +1,22 @@
-20:41:42 **** Incremental Build of configuration Debug for project CLase_04_v2 ****
+22:05:43 **** Incremental Build of configuration Debug for project CLase_04_v2 ****
 make all 
-Building file: ../getNumero.c
+Building file: ../src/PedirNumerosConLimitesDecimales.c
 Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"getNumero.d" -MT"getNumero.o" -o "getNumero.o" "../getNumero.c"
-Finished building: ../getNumero.c
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/PedirNumerosConLimitesDecimales.d" -MT"src/PedirNumerosConLimitesDecimales.o" -o "src/PedirNumerosConLimitesDecimales.o" "../src/PedirNumerosConLimitesDecimales.c"
+Finished building: ../src/PedirNumerosConLimitesDecimales.c
+ 
+Building file: ../src/PedirNumerosConLimitesEnteros.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/PedirNumerosConLimitesEnteros.d" -MT"src/PedirNumerosConLimitesEnteros.o" -o "src/PedirNumerosConLimitesEnteros.o" "../src/PedirNumerosConLimitesEnteros.c"
+Finished building: ../src/PedirNumerosConLimitesEnteros.c
+ 
+Building file: ../src/getNumero.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/getNumero.d" -MT"src/getNumero.o" -o "src/getNumero.o" "../src/getNumero.c"
+Finished building: ../src/getNumero.c
  
 Building target: CLase_04_v2
 Invoking: GCC C Linker
-gcc  -o "CLase_04_v2"  ./getNumero.o   
+gcc  -o "CLase_04_v2"  ./src/PedirNumerosConLimitesDecimales.o ./src/PedirNumerosConLimitesEnteros.o ./src/getNumero.o   
 Finished building target: CLase_04_v2
  
-20:42:17 **** Incremental Build of configuration Debug for project CLase_04_v2 ****
-make all 
-make: No se hace nada para 'all'.
-20:42:32 **** Incremental Build of configuration Debug for project CLase_04_v2 ****
-make all 
-make: No se hace nada para 'all'.
