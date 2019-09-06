@@ -1,4 +1,4 @@
-21:41:39 **** Incremental Build of configuration Debug for project Clase_05 ****
+21:46:04 **** Incremental Build of configuration Debug for project Clase_05 ****
 make all 
 Building file: ../src/funciones.c
 Invoking: Cross GCC Compiler
@@ -10,3 +10,6 @@ Invoking: Cross GCC Linker
 gcc  -o "Clase_05"  ./src/Clase_05.o ./src/funciones.o   
 Finished building target: Clase_05
  
+21:46:51 **** Incremental Build of configuration Debug for project Clase_05 ****
+make all 
+make: No se hace nada para 'all'.

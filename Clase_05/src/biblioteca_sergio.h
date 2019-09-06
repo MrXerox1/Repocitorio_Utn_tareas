@@ -12,6 +12,9 @@
 #define ERROR_UNO -1
 int getInt(int *resultado,int maximo,int minimo,int reintentos,char* mensaje, char* mensajeError);
 int initArrayInt(int *pArray , int limite, int valor);
-
-
+int getArrayInt(int *pArray, int limite, int maximo, int minimo, int reintentos, char *mensaje, char *mensajeError);
+int printArrayInt(int *pArray , int limite);
+int getMaximoMinimo(int *pArray , int limite, int *pMax, int *pMin);
+int getPromedio(int *pArray , int limite, int *promedio);
+int ordenarArrays(*pArrays,limite);
 #endif /* BIBLIOTECA_SERGIO_H_ */
