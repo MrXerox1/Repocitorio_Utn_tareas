@@ -135,13 +135,13 @@ int getPromedio(int *pArray , int limite, int *promedio)
 }
 int ordenarArrays(int *pArray,int limite)
 {
-	int flagDesordenado=1;
+	int flagDesordenado=ERROR_UNO;
 	int i;
 	int aux;
 	int retorno = ERROR_UNO;
-	while(flagDesordenado==1)
+	while(flagDesordenado==ERROR_UNO)
 	{
-		flagDesordenado=0;
+		flagDesordenado=RETORNO_EXITOSO;
 		for(i=0;i<(limite-1);i++)
 		{
 			if(pArray[i] > pArray[i+1])
@@ -149,7 +149,7 @@ int ordenarArrays(int *pArray,int limite)
 				aux=pArray[i];
 				pArray[i]=pArray[i+1];
 				pArray[i+1]=aux;
-				flagDesordenado=1;
+				flagDesordenado=ERROR_UNO;
 			}
 		}
 		retorno=RETORNO_EXITOSO;
