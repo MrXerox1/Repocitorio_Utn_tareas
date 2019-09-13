@@ -1,15 +1,12 @@
-21:14:50 **** Incremental Build of configuration Debug for project clase_07 ****
+22:04:51 **** Incremental Build of configuration Debug for project clase_07 ****
 make all 
-Building file: ../src/clase_07.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/clase_07.d" -MT"src/clase_07.o" -o "src/clase_07.o" "../src/clase_07.c"
-Finished building: ../src/clase_07.c
- 
 Building target: clase_07
 Invoking: GCC C Linker
 gcc  -o "clase_07"  ./src/biblioteca_arrays.o ./src/clase_07.o   
-Finished building target: clase_07
- 
-21:14:54 **** Incremental Build of configuration Debug for project clase_07 ****
-make all 
-make: No se hace nada para 'all'.
+./src/clase_07.o: En la función `getInt':
+/home/alumno/eclipse-workspace/Repocitorio_Utn_tareas/clase_07/Debug/../src/clase_07.c:43: definiciones múltiples de `getInt'
+makefile:30: fallo en las instrucciones para el objetivo 'clase_07'
+./src/biblioteca_arrays.o:/home/alumno/eclipse-workspace/Repocitorio_Utn_tareas/clase_07/Debug/../src/biblioteca_arrays.c:17: primero se definió aquí
+collect2: error: ld returned 1 exit status
+make: *** [clase_07] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.

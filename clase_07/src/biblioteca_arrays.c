@@ -8,29 +8,6 @@
 #include <stdlib.h>
 #include "utn.h"
 
-int getString(char mensaje,char *input)
-{
-    printf("%s",&mensaje);
-    fgets(input,sizeof(input),stdin);
-    return 0;
-}
-
-int initArrayChar(int *pArray , int limite, int valor)
-{
-	int retorno = ERROR_UNO;
-	int i;
-	if(pArray != NULL && limite > 0)
-	{
-		for(i=0;i<limite;i++)
-		{
-			pArray[i]=valor;
-		}
-		retorno = RETORNO_EXITOSO;
-	}
-	return retorno;
-}
-
-
 int getInt(	int *pResultado,
 			char *pMensaje,
 			char *pMensajeError,
