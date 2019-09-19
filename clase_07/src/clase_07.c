@@ -10,20 +10,19 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-
-int getInt(	int *pResultado,char *pMensaje,char *pMensajeError,int minimo,int maximo,int reintentos);
+#include "utn.h"
 
 int main(void)
 {
 	int numero;
-	if(getInt(&numero, "ingrese numero","numero invalido",0,100,2)==0)
+	if(getIntArray(&numero, "ingrese numero","numero invalido",0,100,2)==0)
 	{
-		printf("get int me devolvio:%d",numero);
+		printf("get int me devolvio: %d",numero);
 	}
 
 	// para probar
 	if(utn_esNumerica("+9")==0)
-		printf("ok");
+		printf("\nok");
 	else
 		printf("err");
 	//____________
@@ -34,7 +33,7 @@ int main(void)
 	return EXIT_SUCCESS;
 }
 
-int getInt(	int *pResultado,
+int getIntArray(	int *pResultado,
 		char *pMensaje,
 		char *pMensajeError,
 		int minimo,
