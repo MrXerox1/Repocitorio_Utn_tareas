@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1568644774 source:d:\octavio2018\estructurasclase1\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
