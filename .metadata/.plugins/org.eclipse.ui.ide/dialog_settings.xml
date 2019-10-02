@@ -17,6 +17,7 @@
 		<item key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID" value="false"/>
 		<item key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED" value="false"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="/home/sergio/eclipse-workspace/Repocitorio_Utn_tareas"/>
 			<item value="/home/alumno/eclipse-workspace/Repocitorio_Utn_tareas"/>
 			<item value="/home/alumno/eclipse-workspace/Repocitorio_Utn_tareas/CLase_04_v2"/>
 			<item value="/home/alumno/eclipse-workspace/clase 1"/>
@@ -28,7 +29,10 @@
 	<section name="NewWizardAction">
 		<item key="NewWizardSelectionPage.STORE_SELECTED_ID" value="org.eclipse.cdt.ui.wizards.NewCWizard2"/>
 		<list key="NewWizardSelectionPage.STORE_EXPANDED_CATEGORIES_ID">
+			<item value="org.eclipse.ui.Basic"/>
 			<item value="org.eclipse.cdt.ui.newCWizards"/>
 		</list>
+	</section>
+	<section name="BasicNewProjectResourceWizard">
 	</section>
 </section>
