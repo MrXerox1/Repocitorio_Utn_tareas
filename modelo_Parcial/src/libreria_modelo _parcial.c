@@ -39,34 +39,36 @@ int asociado_Inicializar(datosPersonales asociado[], int size) {
 	return retorno;
 }
 
-int ingresoAsociado(int indice) {
+int ingresoAsociado(datosPersonales *asociado) {
 	int retorno = ERROR;
-	datosPersonales asociado[50];
 
+	datosPersonales aux;
 	__fpurge(stdin);
 	printf("Ingrese el Nombre \n");
 	__fpurge(stdin);
-	fgets(asociado[indice].nombre, sizeof(asociado[indice].nombre), stdin);
+	fgets(aux.nombre, sizeof(aux.nombre), stdin);
 	__fpurge(stdin);
 
 	printf("\nIngrese el apellido \n");
-	fgets(asociado[indice].apellido, sizeof(asociado[indice].apellido), stdin);
+	fgets(aux.apellido, sizeof(aux.apellido), stdin);
 	__fpurge(stdin);
 
 	printf("\nIngrese edad \n");
-	scanf("%d", &asociado[indice].edad);
+	scanf("%d", &aux.edad);
 	__fpurge(stdin);
 
 	printf("\nIngrese numero de dni \n");
 	__fpurge(stdin);
-	scanf("%d", &asociado[indice].dni);
+	scanf("%d", &aux.dni);
 
 	printf("\nDatos Personales");
-	printf("\n%s", asociado[indice].nombre);
-	printf("\n%s", asociado[indice].apellido);
-	printf("\n%d", asociado[indice].edad);
-	printf("\n%d", asociado[indice].dni);
-	printf("\n%d", asociado[indice].idAsociado);
+	printf("\n%s", aux.nombre);
+	printf("\n%s", aux.apellido);
+	printf("\n%d", aux.edad);
+	printf("\n%d", aux.dni);
+	printf("\n%d", aux.idAsociado);
+	*asociado=aux;
+
 	retorno = RETORNO_EXITOSO;
 
 	return retorno;
@@ -80,9 +82,36 @@ int asociadoAlta(datosPersonales *asociado, int size, int *contadorID) {
 			printf("\nNo hay lugares vacios");
 		} else {
 			(*contadorID)++;
+			printf("aca estoy dentro de asociados %d",*contadorID);
 			asociado[posicion].idAsociado = *contadorID;
 			asociado[posicion].isEmpty = LLENO;
-			ingresoAsociado(posicion);
+			ingresoAsociado(&asociado[posicion]);
+			printf("aca estoy dentro de asociados %d",*contadorID);
+			/*__fpurge(stdin);
+				printf("Ingrese el Nombre \n");
+				__fpurge(stdin);
+				fgets(asociado[posicion].nombre, sizeof(asociado[posicion].nombre), stdin);
+				__fpurge(stdin);
+
+				printf("\nIngrese el apellido \n");
+				fgets(asociado[posicion].apellido, sizeof(asociado[posicion].apellido), stdin);
+				__fpurge(stdin);
+
+				printf("\nIngrese edad \n");
+				scanf("%d", &asociado[posicion].edad);
+				__fpurge(stdin);
+
+				printf("\nIngrese numero de dni \n");
+				__fpurge(stdin);
+				scanf("%d", &asociado[posicion].dni);
+
+				printf("\nDatos Personales");
+				printf("\n%s", asociado[posicion].nombre);
+				printf("\n%s", asociado[posicion].apellido);
+				printf("\n%d", asociado[posicion].edad);
+				printf("\n%d", asociado[posicion].dni);
+				printf("\n%d", asociado[posicion].idAsociado);
+				*/
 			retorno = RETORNO_EXITOSO;
 		}
 	}
@@ -128,7 +157,7 @@ int modificarPorId(datosPersonales asociado[], int contadorId) {
 	char salir = 'n';
 	int indice;
 	int opcion;
-
+	__fpurge(stdin);;
 	if (getInt(&id, contadorId, MINIMO, REINTENTOS, MENSAJE, MENSAJE_ERROR)
 			== 0) {
 		if (asociadoBuscarID(asociado, contadorId, id, &indice)==0) {
@@ -140,9 +169,9 @@ int modificarPorId(datosPersonales asociado[], int contadorId) {
 				printf("\n3)Edad %d", asociado[indice].edad);
 				printf("\n4)DNI %d", asociado[indice].dni);
 				printf("\n5)SALIR\n");
-				fflush(stdin);
+				__fpurge(stdin);;
 				scanf("%d", &opcion);
-				fflush(stdin);
+				__fpurge(stdin);;
 				switch (opcion) {
 				case 1:
 					__fpurge(stdin);
@@ -201,7 +230,7 @@ int listarAsociados(datosPersonales asociado[], int size)
     {
         for(i=0;i<size;i++)
         {
-            if(asociado[i].isEmpty==VACIO)
+            if(asociado[i].isEmpty==LLENO)
                 continue;
             else
             printf("\n %s apellido \n %s nombre \n %d dni \n %d edad \n %d id",asociado[i].apellido,asociado[i].nombre,asociado[i].dni,asociado[i].edad,asociado[i].idAsociado);

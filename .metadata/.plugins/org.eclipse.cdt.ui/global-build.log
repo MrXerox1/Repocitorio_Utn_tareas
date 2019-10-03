@@ -666,3 +666,245 @@ Invoking: GCC C Linker
 gcc  -o "modelo_Parcial"  ./src/funciones.o ./src/libreria_modelo\ _parcial.o ./src/modelo_Parcial.o   
 Finished building target: modelo_Parcial
  
+21:47:01 **** Incremental Build of configuration Debug for project modelo_Parcial ****
+make all 
+Building file: ../src/libreria_modelo _parcial.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/libreria_modelo _parcial.d" -MT"src/libreria_modelo\ _parcial.d" -o "src/libreria_modelo _parcial.o" "../src/libreria_modelo _parcial.c"
+Finished building: ../src/libreria_modelo _parcial.c
+ 
+Building target: modelo_Parcial
+Invoking: GCC C Linker
+gcc  -o "modelo_Parcial"  ./src/funciones.o ./src/libreria_modelo\ _parcial.o ./src/modelo_Parcial.o   
+Finished building target: modelo_Parcial
+ 
+21:51:29 **** Incremental Build of configuration Debug for project modelo_Parcial ****
+make all 
+Building file: ../src/libreria_modelo _parcial.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/libreria_modelo _parcial.d" -MT"src/libreria_modelo\ _parcial.d" -o "src/libreria_modelo _parcial.o" "../src/libreria_modelo _parcial.c"
+Finished building: ../src/libreria_modelo _parcial.c
+ 
+Building target: modelo_Parcial
+Invoking: GCC C Linker
+gcc  -o "modelo_Parcial"  ./src/funciones.o ./src/libreria_modelo\ _parcial.o ./src/modelo_Parcial.o   
+Finished building target: modelo_Parcial
+ 
+21:51:32 **** Incremental Build of configuration Debug for project modelo_Parcial ****
+make all 
+make: No se hace nada para 'all'.
+21:53:35 **** Incremental Build of configuration Debug for project modelo_Parcial ****
+make all 
+make: No se hace nada para 'all'.
+21:53:37 **** Incremental Build of configuration Debug for project modelo_Parcial ****
+make all 
+make: No se hace nada para 'all'.
+21:53:44 **** Incremental Build of configuration Debug for project modelo_Parcial ****
+make all 
+make: No se hace nada para 'all'.
+21:53:45 **** Incremental Build of configuration Debug for project modelo_Parcial ****
+make all 
+make: No se hace nada para 'all'.
+22:01:36 **** Incremental Build of configuration Debug for project modelo_Parcial ****
+make all 
+Building file: ../src/libreria_modelo _parcial.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/libreria_modelo _parcial.d" -MT"src/libreria_modelo\ _parcial.d" -o "src/libreria_modelo _parcial.o" "../src/libreria_modelo _parcial.c"
+../src/libreria_modelo _parcial.c:42:5: error: conflicting types for ‘ingresoAsociado’
+ int ingresoAsociado(datosPersonales *asociado) {
+     ^~~~~~~~~~~~~~~
+In file included from ../src/libreria_modelo _parcial.c:11:0:
+../src/libreria_modelo_parcial.h:35:5: note: previous declaration of ‘ingresoAsociado’ was here
+ int ingresoAsociado(int idAsociado);
+     ^~~~~~~~~~~~~~~
+make: *** [src/libreria_modelo _parcial.o] Error 1
+src/subdir.mk:31: fallo en las instrucciones para el objetivo 'src/libreria_modelo _parcial.o'
+"make all" terminated with exit code 2. Build might be incomplete.
+22:01:56 **** Incremental Build of configuration Debug for project modelo_Parcial ****
+make all 
+Building file: ../src/libreria_modelo _parcial.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/libreria_modelo _parcial.d" -MT"src/libreria_modelo\ _parcial.d" -o "src/libreria_modelo _parcial.o" "../src/libreria_modelo _parcial.c"
+Finished building: ../src/libreria_modelo _parcial.c
+ 
+Building file: ../src/modelo_Parcial.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/modelo_Parcial.d" -MT"src/modelo_Parcial.o" -o "src/modelo_Parcial.o" "../src/modelo_Parcial.c"
+../src/modelo_Parcial.c: In function ‘main’:
+../src/modelo_Parcial.c:31:17: warning: passing argument 1 of ‘asociadoAlta’ from incompatible pointer type [-Wincompatible-pointer-types]
+    asociadoAlta(&arrayAsociados, QTY_TIPO, &contadorIdAsociados);
+                 ^
+In file included from ../src/modelo_Parcial.c:13:0:
+../src/libreria_modelo_parcial.h:34:5: note: expected ‘datosPersonales * {aka struct <anonymous> *}’ but argument is of type ‘datosPersonales (*)[200] {aka struct <anonymous> (*)[200]}’
+ int asociadoAlta(datosPersonales asociado[], int size, int *contadorID);
+     ^~~~~~~~~~~~
+../src/modelo_Parcial.c:35:19: warning: passing argument 1 of ‘modificarPorId’ from incompatible pointer type [-Wincompatible-pointer-types]
+    modificarPorId(&arrayAsociados,QTY_TIPO);
+                   ^
+In file included from ../src/modelo_Parcial.c:13:0:
+../src/libreria_modelo_parcial.h:39:5: note: expected ‘datosPersonales * {aka struct <anonymous> *}’ but argument is of type ‘datosPersonales (*)[200] {aka struct <anonymous> (*)[200]}’
+ int modificarPorId(datosPersonales asociado[],int contadorId);
+     ^~~~~~~~~~~~~~
+../src/modelo_Parcial.c:39:20: warning: passing argument 1 of ‘listarAsociados’ from incompatible pointer type [-Wincompatible-pointer-types]
+    listarAsociados(&arrayAsociados,QTY_TIPO);
+                    ^
+In file included from ../src/modelo_Parcial.c:13:0:
+../src/libreria_modelo_parcial.h:37:5: note: expected ‘datosPersonales * {aka struct <anonymous> *}’ but argument is of type ‘datosPersonales (*)[200] {aka struct <anonymous> (*)[200]}’
+ int listarAsociados(datosPersonales asociado[], int size);
+     ^~~~~~~~~~~~~~~
+Finished building: ../src/modelo_Parcial.c
+ 
+Building target: modelo_Parcial
+Invoking: GCC C Linker
+gcc  -o "modelo_Parcial"  ./src/funciones.o ./src/libreria_modelo\ _parcial.o ./src/modelo_Parcial.o   
+Finished building target: modelo_Parcial
+ 
+22:02:36 **** Incremental Build of configuration Debug for project modelo_Parcial ****
+make all 
+Building file: ../src/modelo_Parcial.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/modelo_Parcial.d" -MT"src/modelo_Parcial.o" -o "src/modelo_Parcial.o" "../src/modelo_Parcial.c"
+../src/modelo_Parcial.c: In function ‘main’:
+../src/modelo_Parcial.c:31:32: error: expected expression before ‘]’ token
+    asociadoAlta(arrayAsociados[], QTY_TIPO, &contadorIdAsociados);
+                                ^
+../src/modelo_Parcial.c:35:34: error: expected expression before ‘]’ token
+    modificarPorId(arrayAsociados[],QTY_TIPO);
+                                  ^
+src/subdir.mk:24: fallo en las instrucciones para el objetivo 'src/modelo_Parcial.o'
+../src/modelo_Parcial.c:39:35: error: expected expression before ‘]’ token
+    listarAsociados(arrayAsociados[],QTY_TIPO);
+                                   ^
+make: *** [src/modelo_Parcial.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+22:02:52 **** Incremental Build of configuration Debug for project modelo_Parcial ****
+make all 
+Building file: ../src/modelo_Parcial.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/modelo_Parcial.d" -MT"src/modelo_Parcial.o" -o "src/modelo_Parcial.o" "../src/modelo_Parcial.c"
+Finished building: ../src/modelo_Parcial.c
+ 
+Building target: modelo_Parcial
+Invoking: GCC C Linker
+gcc  -o "modelo_Parcial"  ./src/funciones.o ./src/libreria_modelo\ _parcial.o ./src/modelo_Parcial.o   
+Finished building target: modelo_Parcial
+ 
+22:02:58 **** Incremental Build of configuration Debug for project modelo_Parcial ****
+make all 
+make: No se hace nada para 'all'.
+22:05:49 **** Incremental Build of configuration Debug for project modelo_Parcial ****
+make all 
+Building file: ../src/libreria_modelo _parcial.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/libreria_modelo _parcial.d" -MT"src/libreria_modelo\ _parcial.d" -o "src/libreria_modelo _parcial.o" "../src/libreria_modelo _parcial.c"
+Finished building: ../src/libreria_modelo _parcial.c
+ 
+Building target: modelo_Parcial
+Invoking: GCC C Linker
+gcc  -o "modelo_Parcial"  ./src/funciones.o ./src/libreria_modelo\ _parcial.o ./src/modelo_Parcial.o   
+Finished building target: modelo_Parcial
+ 
+22:05:52 **** Incremental Build of configuration Debug for project modelo_Parcial ****
+make all 
+make: No se hace nada para 'all'.
+22:07:51 **** Incremental Build of configuration Debug for project modelo_Parcial ****
+make all 
+Building file: ../src/libreria_modelo _parcial.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/libreria_modelo _parcial.d" -MT"src/libreria_modelo\ _parcial.d" -o "src/libreria_modelo _parcial.o" "../src/libreria_modelo _parcial.c"
+Finished building: ../src/libreria_modelo _parcial.c
+ 
+Building file: ../src/modelo_Parcial.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/modelo_Parcial.d" -MT"src/modelo_Parcial.o" -o "src/modelo_Parcial.o" "../src/modelo_Parcial.c"
+Finished building: ../src/modelo_Parcial.c
+ 
+Building target: modelo_Parcial
+Invoking: GCC C Linker
+gcc  -o "modelo_Parcial"  ./src/funciones.o ./src/libreria_modelo\ _parcial.o ./src/modelo_Parcial.o   
+Finished building target: modelo_Parcial
+ 
+22:07:52 **** Incremental Build of configuration Debug for project modelo_Parcial ****
+make all 
+make: No se hace nada para 'all'.
+22:14:24 **** Incremental Build of configuration Debug for project modelo_Parcial ****
+make all 
+Building file: ../src/libreria_modelo _parcial.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/libreria_modelo _parcial.d" -MT"src/libreria_modelo\ _parcial.d" -o "src/libreria_modelo _parcial.o" "../src/libreria_modelo _parcial.c"
+../src/libreria_modelo _parcial.c: In function ‘asociadoAlta’:
+../src/libreria_modelo _parcial.c:84:11: warning: passing argument 1 of ‘printf’ from incompatible pointer type [-Wincompatible-pointer-types]
+    printf(contadorID);
+           ^~~~~~~~~~
+In file included from ../src/libreria_modelo _parcial.c:8:0:
+/usr/include/stdio.h:364:12: note: expected ‘const char * restrict’ but argument is of type ‘int *’
+ extern int printf (const char *__restrict __format, ...);
+            ^~~~~~
+Finished building: ../src/libreria_modelo _parcial.c
+ 
+Building target: modelo_Parcial
+Invoking: GCC C Linker
+gcc  -o "modelo_Parcial"  ./src/funciones.o ./src/libreria_modelo\ _parcial.o ./src/modelo_Parcial.o   
+Finished building target: modelo_Parcial
+ 
+22:14:41 **** Incremental Build of configuration Debug for project modelo_Parcial ****
+make all 
+Building file: ../src/libreria_modelo _parcial.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/libreria_modelo _parcial.d" -MT"src/libreria_modelo\ _parcial.d" -o "src/libreria_modelo _parcial.o" "../src/libreria_modelo _parcial.c"
+../src/libreria_modelo _parcial.c: In function ‘asociadoAlta’:
+../src/libreria_modelo _parcial.c:84:13: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘int *’ [-Wformat=]
+    printf("%d",contadorID);
+             ^
+Finished building: ../src/libreria_modelo _parcial.c
+ 
+Building target: modelo_Parcial
+Invoking: GCC C Linker
+gcc  -o "modelo_Parcial"  ./src/funciones.o ./src/libreria_modelo\ _parcial.o ./src/modelo_Parcial.o   
+Finished building target: modelo_Parcial
+ 
+22:15:21 **** Incremental Build of configuration Debug for project modelo_Parcial ****
+make all 
+Building file: ../src/libreria_modelo _parcial.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/libreria_modelo _parcial.d" -MT"src/libreria_modelo\ _parcial.d" -o "src/libreria_modelo _parcial.o" "../src/libreria_modelo _parcial.c"
+Finished building: ../src/libreria_modelo _parcial.c
+ 
+Building target: modelo_Parcial
+Invoking: GCC C Linker
+gcc  -o "modelo_Parcial"  ./src/funciones.o ./src/libreria_modelo\ _parcial.o ./src/modelo_Parcial.o   
+Finished building target: modelo_Parcial
+ 
+22:15:30 **** Incremental Build of configuration Debug for project modelo_Parcial ****
+make all 
+make: No se hace nada para 'all'.
+22:16:17 **** Incremental Build of configuration Debug for project modelo_Parcial ****
+make all 
+Building file: ../src/libreria_modelo _parcial.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/libreria_modelo _parcial.d" -MT"src/libreria_modelo\ _parcial.d" -o "src/libreria_modelo _parcial.o" "../src/libreria_modelo _parcial.c"
+Finished building: ../src/libreria_modelo _parcial.c
+ 
+Building target: modelo_Parcial
+Invoking: GCC C Linker
+gcc  -o "modelo_Parcial"  ./src/funciones.o ./src/libreria_modelo\ _parcial.o ./src/modelo_Parcial.o   
+Finished building target: modelo_Parcial
+ 
+22:16:19 **** Incremental Build of configuration Debug for project modelo_Parcial ****
+make all 
+make: No se hace nada para 'all'.
+22:17:14 **** Incremental Build of configuration Debug for project modelo_Parcial ****
+make all 
+Building file: ../src/libreria_modelo _parcial.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/libreria_modelo _parcial.d" -MT"src/libreria_modelo\ _parcial.d" -o "src/libreria_modelo _parcial.o" "../src/libreria_modelo _parcial.c"
+Finished building: ../src/libreria_modelo _parcial.c
+ 
+Building target: modelo_Parcial
+Invoking: GCC C Linker
+gcc  -o "modelo_Parcial"  ./src/funciones.o ./src/libreria_modelo\ _parcial.o ./src/modelo_Parcial.o   
+Finished building target: modelo_Parcial
+ 
+22:17:15 **** Incremental Build of configuration Debug for project modelo_Parcial ****
+make all 
+make: No se hace nada para 'all'.

@@ -22,21 +22,21 @@ int main(void) {
 
 	do {
 		mostrarMenu();
-		printf("ingrese una opcion valida ");
+		printf("ingrese una opcion ");
 		fflush(stdin);
 		scanf("%d",&opcion);
 
 		switch (opcion) {
 		case 1: //Alta
-			asociadoAlta(&arrayAsociados, QTY_TIPO, &contadorIdAsociados);
+			asociadoAlta(arrayAsociados, QTY_TIPO, &contadorIdAsociados);
 			break;
 
 		case 2:
-			modificarPorId(&arrayAsociados,QTY_TIPO);
+			modificarPorId(arrayAsociados,QTY_TIPO);
 			break;
 
 		case 3:
-			listarAsociados(&arrayAsociados,QTY_TIPO);
+			listarAsociados(arrayAsociados,QTY_TIPO);
 			break;
 
 		case 4:

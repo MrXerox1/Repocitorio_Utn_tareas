@@ -32,7 +32,7 @@ int asociadoBuscarID(datosPersonales array[], int size, int valorBuscado, int* p
 int asociado_Inicializar(datosPersonales asociado[], int size);
 int asociadoBuscarEmpty(datosPersonales asociado[], int size, int *posicion);
 int asociadoAlta(datosPersonales asociado[], int size, int *contadorID);
-int ingresoAsociado(int idAsociado);
+int ingresoAsociado(datosPersonales *asociado);
 int mostrarMenu();
 int listarAsociados(datosPersonales asociado[], int size);
 int asociadoBuscarID(datosPersonales asociado[], int size, int valorBuscado, int* posicion);
