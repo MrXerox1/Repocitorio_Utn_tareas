@@ -10,6 +10,8 @@
 #define QTY_TIPO 200
 #define RETORNO_EXITOSO 0
 #define ERROR -1
+#define VACIO 0
+#define LLENO 1
 typedef struct {
 	int idAsociado;
 	char nombre[30];
@@ -26,12 +28,15 @@ typedef struct {
 	int idAsociado;
 	int isEmpty;
 } Llamada;
-
+int asociadoBuscarID(datosPersonales array[], int size, int valorBuscado, int* posicion);
 int asociado_Inicializar(datosPersonales asociado[], int size);
 int asociadoBuscarEmpty(datosPersonales asociado[], int size, int *posicion);
 int asociadoAlta(datosPersonales asociado[], int size, int *contadorID);
 int ingresoAsociado(int idAsociado);
 int mostrarMenu();
+int listarAsociados(datosPersonales asociado[], int size);
+int asociadoBuscarID(datosPersonales asociado[], int size, int valorBuscado, int* posicion);
+int modificarPorId(datosPersonales asociado[],int contadorId);
 
 
 
