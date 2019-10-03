@@ -61,12 +61,6 @@ int ingresoAsociado(datosPersonales *asociado) {
 	__fpurge(stdin);
 	scanf("%d", &aux.dni);
 
-	printf("\nDatos Personales");
-	printf("\n%s", aux.nombre);
-	printf("\n%s", aux.apellido);
-	printf("\n%d", aux.edad);
-	printf("\n%d", aux.dni);
-	printf("\n%d", aux.idAsociado);
 	*asociado=aux;
 
 	retorno = RETORNO_EXITOSO;
@@ -82,11 +76,15 @@ int asociadoAlta(datosPersonales *asociado, int size, int *contadorID) {
 			printf("\nNo hay lugares vacios");
 		} else {
 			(*contadorID)++;
-			printf("aca estoy dentro de asociados %d",*contadorID);
+			ingresoAsociado(&asociado[posicion]);
 			asociado[posicion].idAsociado = *contadorID;
 			asociado[posicion].isEmpty = LLENO;
-			ingresoAsociado(&asociado[posicion]);
-			printf("aca estoy dentro de asociados %d",*contadorID);
+			printf("\nDatos Personales");
+				printf("\n%s", asociado[posicion].nombre);
+				printf("\n%s", asociado[posicion].apellido);
+				printf("\n%d", asociado[posicion].edad);
+				printf("\n%d", asociado[posicion].dni);
+				printf("\n%d", asociado[posicion].idAsociado);
 			/*__fpurge(stdin);
 				printf("Ingrese el Nombre \n");
 				__fpurge(stdin);
@@ -230,7 +228,7 @@ int listarAsociados(datosPersonales asociado[], int size)
     {
         for(i=0;i<size;i++)
         {
-            if(asociado[i].isEmpty==LLENO)
+            if(asociado[i].isEmpty==VACIO)
                 continue;
             else
             printf("\n %s apellido \n %s nombre \n %d dni \n %d edad \n %d id",asociado[i].apellido,asociado[i].nombre,asociado[i].dni,asociado[i].edad,asociado[i].idAsociado);

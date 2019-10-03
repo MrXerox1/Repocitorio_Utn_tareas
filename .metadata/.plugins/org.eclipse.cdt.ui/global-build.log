@@ -908,3 +908,69 @@ Finished building target: modelo_Parcial
 22:17:15 **** Incremental Build of configuration Debug for project modelo_Parcial ****
 make all 
 make: No se hace nada para 'all'.
+18:51:57 **** Incremental Build of configuration Debug for project modelo_Parcial ****
+make all 
+make: No se hace nada para 'all'.
+18:52:05 **** Incremental Build of configuration Debug for project modelo_Parcial ****
+make all 
+make: No se hace nada para 'all'.
+18:52:37 **** Incremental Build of configuration Debug for project modelo_Parcial ****
+make all 
+Building file: ../src/libreria_modelo _parcial.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/libreria_modelo _parcial.d" -MT"src/libreria_modelo\ _parcial.d" -o "src/libreria_modelo _parcial.o" "../src/libreria_modelo _parcial.c"
+Finished building: ../src/libreria_modelo _parcial.c
+ 
+Building target: modelo_Parcial
+Invoking: GCC C Linker
+gcc  -o "modelo_Parcial"  ./src/funciones.o ./src/libreria_modelo\ _parcial.o ./src/modelo_Parcial.o   
+Finished building target: modelo_Parcial
+ 
+18:52:41 **** Incremental Build of configuration Debug for project modelo_Parcial ****
+make all 
+make: No se hace nada para 'all'.
+18:53:33 **** Incremental Build of configuration Debug for project modelo_Parcial ****
+make all 
+Building file: ../src/libreria_modelo _parcial.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/libreria_modelo _parcial.d" -MT"src/libreria_modelo\ _parcial.d" -o "src/libreria_modelo _parcial.o" "../src/libreria_modelo _parcial.c"
+Finished building: ../src/libreria_modelo _parcial.c
+ 
+Building target: modelo_Parcial
+Invoking: GCC C Linker
+gcc  -o "modelo_Parcial"  ./src/funciones.o ./src/libreria_modelo\ _parcial.o ./src/modelo_Parcial.o   
+Finished building target: modelo_Parcial
+ 
+18:53:34 **** Incremental Build of configuration Debug for project modelo_Parcial ****
+make all 
+make: No se hace nada para 'all'.
+18:55:00 **** Incremental Build of configuration Debug for project modelo_Parcial ****
+make all 
+Building file: ../src/libreria_modelo _parcial.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/libreria_modelo _parcial.d" -MT"src/libreria_modelo\ _parcial.d" -o "src/libreria_modelo _parcial.o" "../src/libreria_modelo _parcial.c"
+Finished building: ../src/libreria_modelo _parcial.c
+ 
+Building target: modelo_Parcial
+Invoking: GCC C Linker
+gcc  -o "modelo_Parcial"  ./src/funciones.o ./src/libreria_modelo\ _parcial.o ./src/modelo_Parcial.o   
+Finished building target: modelo_Parcial
+ 
+18:55:18 **** Incremental Build of configuration Debug for project modelo_Parcial ****
+make all 
+make: No se hace nada para 'all'.
+18:55:59 **** Incremental Build of configuration Debug for project modelo_Parcial ****
+make all 
+Building file: ../src/libreria_modelo _parcial.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/libreria_modelo _parcial.d" -MT"src/libreria_modelo\ _parcial.d" -o "src/libreria_modelo _parcial.o" "../src/libreria_modelo _parcial.c"
+Finished building: ../src/libreria_modelo _parcial.c
+ 
+Building target: modelo_Parcial
+Invoking: GCC C Linker
+gcc  -o "modelo_Parcial"  ./src/funciones.o ./src/libreria_modelo\ _parcial.o ./src/modelo_Parcial.o   
+Finished building target: modelo_Parcial
+ 
+18:56:00 **** Incremental Build of configuration Debug for project modelo_Parcial ****
+make all 
+make: No se hace nada para 'all'.
