@@ -61,7 +61,7 @@ int ingresoAsociado(datosPersonales *asociado) {
 	__fpurge(stdin);
 	scanf("%d", &aux.dni);
 
-	*asociado=aux;
+	*asociado = aux;
 
 	retorno = RETORNO_EXITOSO;
 
@@ -80,36 +80,36 @@ int asociadoAlta(datosPersonales *asociado, int size, int *contadorID) {
 			asociado[posicion].idAsociado = *contadorID;
 			asociado[posicion].isEmpty = LLENO;
 			printf("\nDatos Personales");
-				printf("\n%s", asociado[posicion].nombre);
-				printf("\n%s", asociado[posicion].apellido);
-				printf("\n%d", asociado[posicion].edad);
-				printf("\n%d", asociado[posicion].dni);
-				printf("\n%d", asociado[posicion].idAsociado);
+			printf("\n%s", asociado[posicion].nombre);
+			printf("\n%s", asociado[posicion].apellido);
+			printf("\n%d", asociado[posicion].edad);
+			printf("\n%d", asociado[posicion].dni);
+			printf("\n%d", asociado[posicion].idAsociado);
 			/*__fpurge(stdin);
-				printf("Ingrese el Nombre \n");
-				__fpurge(stdin);
-				fgets(asociado[posicion].nombre, sizeof(asociado[posicion].nombre), stdin);
-				__fpurge(stdin);
+			 printf("Ingrese el Nombre \n");
+			 __fpurge(stdin);
+			 fgets(asociado[posicion].nombre, sizeof(asociado[posicion].nombre), stdin);
+			 __fpurge(stdin);
 
-				printf("\nIngrese el apellido \n");
-				fgets(asociado[posicion].apellido, sizeof(asociado[posicion].apellido), stdin);
-				__fpurge(stdin);
+			 printf("\nIngrese el apellido \n");
+			 fgets(asociado[posicion].apellido, sizeof(asociado[posicion].apellido), stdin);
+			 __fpurge(stdin);
 
-				printf("\nIngrese edad \n");
-				scanf("%d", &asociado[posicion].edad);
-				__fpurge(stdin);
+			 printf("\nIngrese edad \n");
+			 scanf("%d", &asociado[posicion].edad);
+			 __fpurge(stdin);
 
-				printf("\nIngrese numero de dni \n");
-				__fpurge(stdin);
-				scanf("%d", &asociado[posicion].dni);
+			 printf("\nIngrese numero de dni \n");
+			 __fpurge(stdin);
+			 scanf("%d", &asociado[posicion].dni);
 
-				printf("\nDatos Personales");
-				printf("\n%s", asociado[posicion].nombre);
-				printf("\n%s", asociado[posicion].apellido);
-				printf("\n%d", asociado[posicion].edad);
-				printf("\n%d", asociado[posicion].dni);
-				printf("\n%d", asociado[posicion].idAsociado);
-				*/
+			 printf("\nDatos Personales");
+			 printf("\n%s", asociado[posicion].nombre);
+			 printf("\n%s", asociado[posicion].apellido);
+			 printf("\n%d", asociado[posicion].edad);
+			 printf("\n%d", asociado[posicion].dni);
+			 printf("\n%d", asociado[posicion].idAsociado);
+			 */
 			retorno = RETORNO_EXITOSO;
 		}
 	}
@@ -155,10 +155,11 @@ int modificarPorId(datosPersonales asociado[], int contadorId) {
 	char salir = 'n';
 	int indice;
 	int opcion;
-	__fpurge(stdin);;
+	__fpurge(stdin);
+	;
 	if (getInt(&id, contadorId, MINIMO, REINTENTOS, MENSAJE, MENSAJE_ERROR)
 			== 0) {
-		if (asociadoBuscarID(asociado, contadorId, id, &indice)==0) {
+		if (asociadoBuscarID(asociado, contadorId, id, &indice) == 0) {
 
 			do {
 				printf("\nElegir opcion a modificar");
@@ -167,9 +168,11 @@ int modificarPorId(datosPersonales asociado[], int contadorId) {
 				printf("\n3)Edad %d", asociado[indice].edad);
 				printf("\n4)DNI %d", asociado[indice].dni);
 				printf("\n5)SALIR\n");
-				__fpurge(stdin);;
+				__fpurge(stdin);
+				;
 				scanf("%d", &opcion);
-				__fpurge(stdin);;
+				__fpurge(stdin);
+				;
 				switch (opcion) {
 				case 1:
 					__fpurge(stdin);
@@ -211,8 +214,8 @@ int modificarPorId(datosPersonales asociado[], int contadorId) {
 				default:
 					printf("\nOpcion no valida");
 				}
-			}while(salir != 'n');
-		}else{
+			} while (salir != 'n');
+		} else {
 			printf("error al modificar");
 		}
 	}
@@ -220,20 +223,159 @@ int modificarPorId(datosPersonales asociado[], int contadorId) {
 	return retorno;
 }
 
-int listarAsociados(datosPersonales asociado[], int size)
-{
-    int retorno=ERROR;
-    int i;
-    if(asociado!=NULL && size>=0)
-    {
-        for(i=0;i<size;i++)
-        {
-            if(asociado[i].isEmpty==VACIO)
-                continue;
-            else
-            printf("\n %s apellido \n %s nombre \n %d dni \n %d edad \n %d id",asociado[i].apellido,asociado[i].nombre,asociado[i].dni,asociado[i].edad,asociado[i].idAsociado);
-         }
-        retorno=RETORNO_EXITOSO;
-    }
-    return retorno;
+int listarAsociados(datosPersonales asociado[], int size) {
+	int retorno = ERROR;
+	int i;
+	if (asociado != NULL && size >= 0) {
+		for (i = 0; i < size; i++) {
+			if (asociado[i].isEmpty == VACIO)
+				continue;
+			else
+				printf("\n nombre:%s\n apellido:%s\n dni:%d\n edad:%d\nidAsociado:%d\nisEmpty:%d\n", asociado[i].nombre,
+						asociado[i].apellido, asociado[i].dni, asociado[i].edad,
+						asociado[i].idAsociado, asociado[i].isEmpty);
+		}
+		retorno = RETORNO_EXITOSO;
+	}
+	return retorno;
+}
+
+int bajaAsociado(datosPersonales asociado[], int contadorId) {
+	int retorno = ERROR;
+	int id;
+	int indice;
+	__fpurge(stdin);
+	;
+	if (getInt(&id, contadorId, MINIMO, REINTENTOS, MENSAJE,
+	MENSAJE_ERROR) == RETORNO_EXITOSO) {
+		if (asociadoBuscarID(asociado, contadorId, id,
+				&indice)==RETORNO_EXITOSO) {
+			if (asociado[indice].isEmpty == LLENO) {
+				asociado[indice].isEmpty = VACIO;
+				printf("el espacio de %d esta ahora vacio \n", id);
+			} else {
+				printf("[error] este id ya esta vacio");
+			}
+		}
+	}
+	return retorno;
+}
+
+int llamadaAlta(Llamada ingreso[],int size,int *contadorId,datosPersonales pepe) {
+	int retorno = ERROR;
+	int opcion;
+	int posicion;
+	Llamada aux;
+	if (llamadaBuscarEmpty(ingreso,size,&posicion)==0) {
+		printf("Ingrese el motivo \n 1)acv\n2)gripe\n3)infarto");
+		(*contadorId)++;
+		__fpurge(stdin);
+		scanf("%d", &opcion);
+		switch (opcion) {
+		case 1:
+			aux.motivo = ACV;
+			break;
+		case 2:
+			aux.motivo = GRIPE;
+			break;
+		case 3:
+			aux.motivo = INFARTO;
+			break;
+		default:
+			printf("error opcion no valida");
+			break;
+
+		}
+		aux.idllamada = *contadorId;
+		ingreso[posicion]
+		__fpurge(stdin);
+		aux.estado = PENDIENTE;
+		aux.isEmpty=LLENO;
+		retorno = RETORNO_EXITOSO;
+		ingreso[posicion]=aux;
+}
+return retorno;
+}
+
+/*int ingresoLlamada(Llamada *llamada, int idAsociado) {
+ int retorno = ERROR;
+ int opcion;
+ Llamada aux;
+ __fpurge(stdin);
+ printf("Ingrese el motivo \n 1)acv\n2)gripe\n3)infarto");
+ __fpurge(stdin);
+ scanf("%d",&opcion);
+ switch(opcion){
+ case 1:
+ aux.motivo = ACV;
+ break;
+ case 2:
+ aux.motivo = GRIPE;
+ break;
+ case 3:
+ aux.motivo = INFARTO;
+ break;
+ default:
+ break;
+
+ }
+ __fpurge(stdin);
+ aux.estado = PENDIENTE;
+ *llamada->estado = aux.estado;
+ *llamada->idAsociado = idAsociado;
+ *llamada->motivo = aux.motivo;
+ retorno = RETORNO_EXITOSO;
+
+ return retorno;
+ }*/
+
+int llamadaBuscarEmpty(Llamada llamada[], int size, int *posicion) {
+int retorno = ERROR;
+int i;
+if (llamada != NULL && size >= 0 && posicion != NULL) {
+for (i = 0; i < size; i++) {
+	if (llamada[i].isEmpty == VACIO) {
+		retorno = RETORNO_EXITOSO;
+		*posicion = i;
+		break;
+	}
+}
+}
+return retorno;
+}
+int listarLLamadas(Llamada llamada[], int size) {
+int retorno = ERROR;
+int i;
+if (llamada != NULL && size >= 0) {
+for (i = 0; i < size; i++) {
+	if (llamada[i].isEmpty == VACIO)
+		continue;
+	else {
+		printf("\nidllamda:%d\nidAsociado:%d\nidAmbulancia:%d\nmotivo:%d\nestado:%d\ntiempo:%d\nisEmpty:%d\n", llamada[i].idllamada,
+				llamada[i].idAsociado, llamada[i].idAmbulancia,
+				llamada[i].motivo, llamada[i].estado, llamada[i].tiempo,
+				llamada[i].isEmpty);
+	}
+	retorno = RETORNO_EXITOSO;
+}
+}
+return retorno;
+}
+
+int asociadoBuscarID(Llamada llamada[], int size, int valorBuscado,
+		int *posicion) {
+	int retorno = ERROR;
+	int i;
+	if (llamada != NULL && size >= 0) {
+		for (i = 0; i < size; i++) {
+			if (llamada[i].isEmpty == VACIO)
+				continue;
+			else if (llamada[i].idAsociado == valorBuscado) {
+				retorno = 0;
+				*posicion = i;
+				break;
+			}
+		}
+	}
+	return retorno;
 }

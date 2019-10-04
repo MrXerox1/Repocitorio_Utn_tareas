@@ -7,11 +7,22 @@
 
 #ifndef LIBRERIA_MODELO_PARCIAL_H_
 #define LIBRERIA_MODELO_PARCIAL_H_
+//cantida de arrays
 #define QTY_TIPO 200
+//retornos
 #define RETORNO_EXITOSO 0
 #define ERROR -1
+//isEmpty
 #define VACIO 0
 #define LLENO 1
+//estado ambulancia
+#define PENDIENTE 0
+#define CUMPLIDO 1
+//motivos
+#define ACV 1
+#define GRIPE 2
+#define INFARTO 3
+
 typedef struct {
 	int idAsociado;
 	char nombre[30];
@@ -21,11 +32,12 @@ typedef struct {
 	int isEmpty;
 } datosPersonales;
 typedef struct {
-	char idllamada[30];
-	char motivo[50];//(infarto/gripe/acu)
-	char estado[50]; //(pendiente/completo)
-	int tiempo;
+	int idllamada;
 	int idAsociado;
+	int idAmbulancia;
+	int motivo;//(infarto/gripe/acu)
+	int estado; //(pendiente/completo)
+	int tiempo;
 	int isEmpty;
 } Llamada;
 int asociadoBuscarID(datosPersonales array[], int size, int valorBuscado, int* posicion);
@@ -37,6 +49,12 @@ int mostrarMenu();
 int listarAsociados(datosPersonales asociado[], int size);
 int asociadoBuscarID(datosPersonales asociado[], int size, int valorBuscado, int* posicion);
 int modificarPorId(datosPersonales asociado[],int contadorId);
+int bajaAsociado(datosPersonales asociado[], int contadorId);
+
+int ingresoLlamada(Llamada *llamada, int idAsociado);
+int llamadaBuscarEmpty(Llamada llamada[], int size, int *posicion);
+int listarLLamadas(Llamada llamada[], int size);
+int llamadaAlta(Llamada ingreso[],int size,int *contadorId);
 
 
 

@@ -15,9 +15,11 @@ int main(void) {
 
 	int opcion;
 	int contadorIdAsociados = 0;
+	int contadorIdLllamada = 0;
 	int retorno=ERROR;
 
 	datosPersonales arrayAsociados[QTY_TIPO];
+	Llamada llamada[QTY_TIPO];
 	asociado_Inicializar(arrayAsociados, QTY_TIPO);
 
 	do {
@@ -36,16 +38,21 @@ int main(void) {
 			break;
 
 		case 3:
-			listarAsociados(arrayAsociados,QTY_TIPO);
+			bajaAsociado(arrayAsociados, contadorIdAsociados);
+
 			break;
 
 		case 4:
+
+			llamadaAlta(llamada,QTY_TIPO,&contadorIdLllamada,);
 			break;
 
 		case 5:
 			break;
 
 		case 6:
+			listarAsociados(arrayAsociados,QTY_TIPO);
+			listarLLamadas(llamada, QTY_TIPO);
 			break;
 
 
