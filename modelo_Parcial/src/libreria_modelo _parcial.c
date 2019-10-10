@@ -287,7 +287,7 @@ int llamadaAlta(Llamada ingreso[],int size,int *contadorId,datosPersonales pepe)
 
 		}
 		aux.idllamada = *contadorId;
-		ingreso[posicion]
+		ingreso[posicion];
 		__fpurge(stdin);
 		aux.estado = PENDIENTE;
 		aux.isEmpty=LLENO;
