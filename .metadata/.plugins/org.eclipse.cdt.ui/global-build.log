@@ -756,3 +756,64 @@ Finished building target: modelo_Parcial
 22:02:57 **** Incremental Build of configuration Debug for project modelo_Parcial ****
 make all 
 make: No se hace nada para 'all'.
+21:08:53 **** Build of configuration Debug for project Tp_2 ****
+make all 
+Building file: ../src/Tp_2.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Tp_2.d" -MT"src/Tp_2.o" -o "src/Tp_2.o" "../src/Tp_2.c"
+Finished building: ../src/Tp_2.c
+ 
+Building file: ../src/funciones.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/funciones.d" -MT"src/funciones.o" -o "src/funciones.o" "../src/funciones.c"
+Finished building: ../src/funciones.c
+ 
+Building file: ../src/libreria_empleado.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/libreria_empleado.d" -MT"src/libreria_empleado.o" -o "src/libreria_empleado.o" "../src/libreria_empleado.c"
+Finished building: ../src/libreria_empleado.c
+ 
+Building target: Tp_2
+Invoking: GCC C Linker
+gcc  -o "Tp_2"  ./src/Tp_2.o ./src/funciones.o ./src/libreria_empleado.o   
+Finished building target: Tp_2
+ 
+21:09:06 **** Incremental Build of configuration Debug for project Tp_2 ****
+make all 
+make: No se hace nada para 'all'.
+21:42:18 **** Clean-only build of configuration Debug for project Parcial ****
+make clean 
+rm -rf  ./src/Datos.o ./src/Parcial.o ./src/funciones.o ./src/informes.o ./src/libreria_modelo\ _parcial.o  ./src/Datos.d ./src/Parcial.d ./src/funciones.d ./src/informes.d ./src/libreria_modelo\ _parcial.d  Parcial_1
+ 
+21:42:18 **** Build of configuration Debug for project Parcial ****
+make all 
+Building file: ../src/Datos.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Datos.d" -MT"src/Datos.o" -o "src/Datos.o" "../src/Datos.c"
+Finished building: ../src/Datos.c
+ 
+Building file: ../src/Parcial.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Parcial.d" -MT"src/Parcial.o" -o "src/Parcial.o" "../src/Parcial.c"
+Finished building: ../src/Parcial.c
+ 
+Building file: ../src/funciones.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/funciones.d" -MT"src/funciones.o" -o "src/funciones.o" "../src/funciones.c"
+Finished building: ../src/funciones.c
+ 
+Building file: ../src/informes.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/informes.d" -MT"src/informes.o" -o "src/informes.o" "../src/informes.c"
+Finished building: ../src/informes.c
+ 
+Building file: ../src/libreria_modelo _parcial.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/libreria_modelo _parcial.d" -MT"src/libreria_modelo\ _parcial.d" -o "src/libreria_modelo _parcial.o" "../src/libreria_modelo _parcial.c"
+Finished building: ../src/libreria_modelo _parcial.c
+ 
+Building target: Parcial
+Invoking: GCC C Linker
+gcc  -o "Parcial"  ./src/Datos.o ./src/Parcial.o ./src/funciones.o ./src/informes.o ./src/libreria_modelo\ _parcial.o   
+Finished building target: Parcial
+ 
