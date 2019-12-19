@@ -83,7 +83,15 @@ int controller_ListComputer(LinkedList* pArrayListComputer)
 		for(i=0;i<ll_len(pArrayListComputer);i++)
 		{
 			aux = ll_get(pArrayListComputer,i);
-			printf("%d %s %d %d \n",aux->id,aux->descripcion,aux->precio,aux->idtipo);
+			printf("%d %s %d ",aux->id,aux->descripcion,aux->precio);
+			if(aux->idtipo==1)
+			{
+				printf("Desktop\n");
+			}
+			else if(aux->idtipo==2)
+			{
+				printf("Laptop\n");
+			}
 		}
 	}
     return 1;
